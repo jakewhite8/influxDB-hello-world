@@ -3,15 +3,15 @@
 ### Write and query time series data using InfluxDB
 
 <ol>
- <li>Create a bucket and access token in the influxDB UI found under the Getting Started link of the [InfluxDB Cloud Serverless](https://www.influxdata.com/products/influxdb-cloud/serverless/) webpage</li>
+ <li>Create a bucket and access token in the influxDB UI found under the Getting Started link of the [InfluxDB Cloud Serverless](https://www.influxdata.com/products/influxdb-cloud/serverless) webpage</li>
  <li>Clone influxDB-hello-world repository locally</li>
  <li>Set variables
   <ol>
    <li>Set enviroment variables (token and database name) locally (Unix):
-    ```sh
-    export INFLUXDB_TOKEN=<influx-token>
-    export INFLUX_DATABASE=<influx-bucket-name>
-    ```
+```
+export INFLUXDB_TOKEN=<influx-token>
+export INFLUX_DATABASE=<influx-bucket-name>
+```
    </li>
    <li>Change the timestamps in the write.go lines line protocol records to be within the time range configured for your bucket</li>
    <li>Change the host URL in the client initalization found in both the write.go and query.go files</li>
@@ -19,8 +19,8 @@
   </ol>
  </li>
  <li>Install the packages listed in imports, build the influxdb_go_client module, and execute the main() function (Unix):
-  ```sh
-  go mod tidy && go build && go run influxdb_go_client
-  ```
+```
+go mod tidy && go build && go run influxdb_go_client
+```
  </li>
 </ol>
